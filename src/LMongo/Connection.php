@@ -99,6 +99,26 @@ class Connection {
 
 		$dsn.= "/{$database}";
 
+		if (isset($config['options']))
+		{
+			//	Filtering out only NULLs & false values since 0 is a valid value sometimes.
+			//	See http://docs.mongodb.org/manual/reference/connection-string/#connection-string-options
+			$config['options'] = array_filter($config['options'], function($v){
+				return $v !== NULL && $v !== false;
+			});
+
+			if ($config['options'])
+			{
+				$options = array();
+				foreach ($config['options'] as $k => $v)
+				{
+					$options[] = "{$k}={$v}";
+				}
+				$options = implode('&', $options);
+				$dsn.= "?" . $options;
+			}
+		}
+
 		return $dsn;
 	}
 
