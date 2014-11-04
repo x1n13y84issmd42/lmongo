@@ -1,9 +1,9 @@
 {
-    "name": "navruzm/lmongo",
+    "name": "x1n13y84issmd42/lmongo",
     "type": "library",
     "description": "MongoDB Package for Laravel 4.",
     "keywords": ["MongoDB", "Mongo", "Laravel 4", "database"],
-    "homepage": "http://github.com/navruzm/lmongo/",
+    "homepage": "http://github.com/x1n13y84issmd42/lmongo/",
     "license": "MIT",
     "require": {
         "php": ">=5.3.0",
