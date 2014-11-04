@@ -99,8 +99,6 @@ class Connection {
 
 		$dsn.= "/{$database}";
 
-		$config['options'] = array_filter($config['options']);
-
 		if (isset($config['options']))
 		{
 			//	Filtering out only NULLs & false values since 0 is a valid value sometimes.
