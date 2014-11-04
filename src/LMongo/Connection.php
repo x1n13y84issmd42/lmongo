@@ -109,7 +109,7 @@ class Connection {
 
 			if ($config['options'])
 			{
-				$options = [];
+				$options = array();
 				foreach ($config['options'] as $k => $v)
 				{
 					$options[] = "{$k}={$v}";
